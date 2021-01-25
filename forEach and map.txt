@@ -1,0 +1,16 @@
+var arr = [1, 2, 3, 4];
+
+console.log("This the normal array: -");
+console.log(arr);
+
+console.log("Doubling the array using map(): -");
+var doubled = arr.map((x) => {
+  return x * 2;
+});
+console.log(doubled);
+
+console.log("Doubling the array using forEach(): -");
+arr.forEach((num, index) => {
+  arr[index] = num * 2;
+});
+console.log(arr);
