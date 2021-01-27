@@ -1,0 +1,26 @@
+// Implementing the callback functions
+
+function userLogin(email, password, callback) {
+  setTimeout(() => {
+    callback({ userEmail: email });
+  }, 3000);
+}
+
+function getUserTimeLine(email, callback) {
+  setTimeout(() => {
+    callback(["post1", "post2", "post3", "post4"]);
+  }, 2000);
+}
+
+console.log("Start");
+
+console.log("We are on website");
+
+userLogin("rudra.kaniya.rk@gmail.com", "rudra123", (user) => {
+  console.log(user);
+  getUserTimeLine("rudra.kaniya.rk@gmail.com", (userTL) => {
+    console.log(userTL);
+  });
+});
+
+console.log("End");

@@ -1,0 +1,17 @@
+// Async code example
+
+function otherFunction() {
+  console.log("We are under other function");
+
+  console.log("This is another line of the otherFunction()");
+}
+
+console.log("Start");
+
+setTimeout(() => {
+  console.log("This is a timeout statement");
+}, 5000);
+
+setTimeout(otherFunction, 6000);
+
+console.log("End");

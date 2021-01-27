@@ -1,0 +1,13 @@
+// Sync code example
+
+function otherFunction() {
+  console.log("We are under other function");
+
+  console.log("This is another line of the otherFunction()");
+}
+
+console.log("Start");
+
+otherFunction();
+
+console.log("End");

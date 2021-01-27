@@ -1,0 +1,38 @@
+function Person(firstName, lastName, age, sex) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.age = age;
+  this.sex = sex;
+}
+
+var myPerson = new Person("Rudra", "Kaniya", 21, "Male");
+var myRoommate = new Person("Gaurav", "Thakur", 21, "Female");
+
+console.log(myPerson);
+console.log(myRoommate);
+
+/* We can use prototype to add a property to a function
+which is not even initialized inside the function body.
+*/
+
+Person.prototype.printDetails = function () {
+  return (
+    "Name = " +
+    this.firstName +
+    " " +
+    this.lastName +
+    " \n" +
+    "Age = " +
+    this.age +
+    "\n" +
+    "Sex = " +
+    this.sex +
+    "\n"
+  );
+};
+
+console.log(
+  "Now lets print the function which we explicitly defined using the prototype keyword: - "
+);
+console.log(myPerson.printDetails());
+console.log(myRoommate.printDetails());

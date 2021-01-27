@@ -1,4 +1,4 @@
-// Implementing the promises functions
+// Implementing the promises functions using async await
 
 function userLogin(email, password) {
   return new Promise((resolve, reject) => {

@@ -19,22 +19,8 @@ function getUserTimeLine(email) {
 console.log("Start");
 console.log("We are on website");
 
-// async function details
-
-async function displayUserDetails() {
-  try {
-    const loggedInUser = await userLogin(
-      "rudra.kaniya.rk@gmail.com",
-      "rudra123"
-    );
-    console.log(loggedInUser);
-    const TimeLine = await getUserTimeLine(loggedInUser.userEmail);
-    console.log(TimeLine);
-  } catch (err) {
-    console.log("There was an error getting the user data.");
-  }
-}
-
-displayUserDetails();
+userLogin("rudra.kaniya.rk@gmail.com", "rudra123")
+  .then((user) => getUserTimeLine(user.userEmail))
+  .then((userTimeLine) => console.log(userTimeLine));
 
 console.log("End");
